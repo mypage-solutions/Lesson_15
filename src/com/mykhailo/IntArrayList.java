@@ -62,7 +62,7 @@ public class IntArrayList implements IntList {
     }
 
     @Override
-    public void remove(int index, int value) {
+    public void remove(int index) {
         if (index > arr.length - 1 || index < 0) {
             throw new RuntimeException("ArrayIndexOutOfBoundsException");
         }

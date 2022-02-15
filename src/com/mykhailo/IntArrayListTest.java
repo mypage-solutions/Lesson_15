@@ -10,7 +10,7 @@ class IntArrayListTest {
         System.out.println(array);
         array.add(3, 99);
         System.out.println(array);
-        array.remove(3, 99);
+        array.remove(3);
         System.out.println(array);
         IntList array2 = new IntArrayList(5, 17, 1, 69, 0, 233, 799, 125);
 
