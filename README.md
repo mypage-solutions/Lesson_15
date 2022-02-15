@@ -16,7 +16,7 @@
 
 Homework contains topics:
 1. Declare class IntArrayList that implements IntList interface.
-2. Implement methods that insert and remove an element at a specific position in an Array.
+2. Implement methods for adding and removing an element at a specific position in an Array.
 
 ### Interfaces in JAVA. 
 Interface is a blueprint for a class, ensures the class implements it provides all the services an interface promised to provide to the outside world. 
