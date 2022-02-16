@@ -10,9 +10,8 @@ class IntArrayListTest {
         System.out.println(list1);
         list1.set(6, 66);
         System.out.println(list1);
-        System.out.println("The index " + 2 + " contains value: " + list1.get(2));
-        System.out.println("The length of a list: " + list1.size());
-        System.out.println(list1);
+        System.out.println("The element at index 2 is " + list1.get(2));
+        System.out.println("The length of a list is " + list1.size());
         list1.add(6, 99);
         System.out.println(list1);
         list1.remove(6);
