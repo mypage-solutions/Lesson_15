@@ -45,11 +45,6 @@ public class IntArrayList implements IntList {
 
     @Override
     public int[] toArray() {
-//        IntArrayList list = new IntArrayList();
-//        int[] newArray = new int[list.size()];
-//        for (int i = 0; i < list.size(); i++) {
-//            newArray[i] = list.get(i);
-//        }
         return array;
     }
 

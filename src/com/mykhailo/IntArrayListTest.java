@@ -17,18 +17,19 @@ class IntArrayListTest {
         System.out.println(list1);
         list1.remove(6);
         System.out.println(list1);
-        IntList list3 = new IntArrayList(5, 17, 1, 69, 0, 233, 799, 125);
-        System.out.println("Unsorted list: " + list3);
+        System.out.println(Arrays.toString(list1.toArray()));
+        IntList list2 = new IntArrayList(5, 17, 1, 69, 0, 233, 799, 125);
+        System.out.println("Unsorted list: " + list2);
 
-        for (int i = 0; i < list3.size() - 1; i++) {
-            for (int j = 0; j < list3.size() - i - 1; j++) {
-                if (list3.get(j) > list3.get(j + 1)) {
-                    int temp = list3.get(j);
-                    list3.set(j, list3.get(j + 1));
-                    list3.set(j + 1, temp);
+        for (int i = 0; i < list2.size() - 1; i++) {
+            for (int j = 0; j < list2.size() - i - 1; j++) {
+                if (list2.get(j) > list2.get(j + 1)) {
+                    int temp = list2.get(j);
+                    list2.set(j, list2.get(j + 1));
+                    list2.set(j + 1, temp);
                 }
             }
         }
-        System.out.println("Sorted array:" + list3);
+        System.out.println("Sorted array:" + list2);
     }
 }
