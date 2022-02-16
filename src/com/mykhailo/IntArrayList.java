@@ -9,14 +9,8 @@ public class IntArrayList implements IntList {
     public IntArrayList() {
     }
 
-    public IntArrayList(int... values) {
-        this.array = new int[values.length];
-        System.arraycopy(values, 0, array, 0, array.length);
-    }
-
-    public IntArrayList(IntList list) {
-        this.array = new int[list.size()];
-        System.arraycopy(list.toArray(), 0, array, 0, array.length);
+    public IntArrayList(int[] array) {
+        this.array = array;
     }
 
     @Override
