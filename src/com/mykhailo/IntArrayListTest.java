@@ -8,7 +8,7 @@ class IntArrayListTest {
         System.out.println(list1);
         list1.add(10);
         System.out.println(list1);
-        list1.set(4, 66);
+        list1.set(6, 66);
         System.out.println(list1);
         System.out.println("The index " + 2 + " contains value: " + list1.get(2));
         System.out.println("The length of a list: " + list1.size());
@@ -17,7 +17,11 @@ class IntArrayListTest {
         System.out.println(list1);
         list1.remove(6);
         System.out.println(list1);
-        System.out.println(Arrays.toString(list1.toArray()));
+        int[] array = list1.toArray();
+        System.out.println(Arrays.toString(array));
+        IntList list3 = new IntArrayList(list1);
+        System.out.println(list3 + " is a copy of " + list1);
+
         IntList list2 = new IntArrayList(5, 17, 1, 69, 0, 233, 799, 125);
         System.out.println("Unsorted list: " + list2);
 
