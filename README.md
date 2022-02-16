@@ -96,7 +96,7 @@ class ACMEBicycle implements Bicycle {
 
 Implementing an interface allows a class to become more formal about the behavior it promises to provide. Interfaces form a contract between the class and the outside world, and this contract is enforced at build time by the compiler. If your class claims to implement an interface, all methods defined by that interface must appear in its source code before the class will successfully compile.
 
-#### Difference between Interface and Abstract class.
+### Difference between Interface and Abstract class.
 <p align="center">
   <img src="https://github.com/mypage-solutions/Images/blob/main/Images/interface-vs-abstract-class-in-java.jpg" />
 </p>
