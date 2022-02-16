@@ -33,6 +33,6 @@ class IntArrayListTest {
                 }
             }
         }
-        System.out.println("Sorted array:" + list2);
+        System.out.println("Sorted list: " + list2);
     }
 }
