@@ -18,7 +18,6 @@ Homework contains topics:
 1. Declare class IntArrayList that implements IntList interface.
 2. Implement methods for adding and removing an element at a specific position in an Array.
 
-<br>
 ```java
 public interface IntList {
     void add(int value);
