@@ -4,72 +4,76 @@ import java.util.Arrays;
 
 public class IntArrayList implements IntList {
 
-    private int[] arr = new int[0];
+    private int[] array = new int[0];
 
     public IntArrayList() {
     }
 
     public IntArrayList(int... values) {
-        arr = new int[values.length];
-        System.arraycopy(values, 0, arr, 0, values.length);
+        array = new int[values.length];
+        System.arraycopy(values, 0, array, 0, values.length);
     }
 
     @Override
     public void add(int value) {
-        int[] tempArr = new int[arr.length + 1];
-        System.arraycopy(arr, 0, tempArr, 0, arr.length);
-        tempArr[tempArr.length - 1] = value;
-        arr = tempArr;
+        int[] tempArray = new int[array.length + 1];
+        System.arraycopy(array, 0, tempArray, 0, array.length);
+        tempArray[tempArray.length - 1] = value;
+        array = tempArray;
     }
 
     @Override
     public int get(int index) {
-        if (index > arr.length - 1 || index < 0) {
+        if (index > array.length - 1 || index < 0) {
             throw new RuntimeException("ArrayIndexOutOfBoundsException");
         }
-        return arr[index];
+        return array[index];
     }
 
     @Override
     public void set(int index, int value) {
-        if (index > arr.length - 1 || index < 0) {
+        if (index > array.length - 1 || index < 0) {
             throw new RuntimeException("ArrayIndexOutOfBoundsException");
         }
-        arr[index] = value;
+        array[index] = value;
     }
 
     @Override
     public int size() {
-        return arr.length;
+        return array.length;
     }
 
     @Override
     public int[] toArray() {
-
-        return arr;
+//        IntArrayList list = new IntArrayList();
+//        int[] newArray = new int[list.size()];
+//        for (int i = 0; i < list.size(); i++) {
+//            newArray[i] = list.get(i);
+//        }
+        return array;
     }
 
     @Override
     public void add(int index, int value) {
-        if (index > arr.length - 1 || index < 0) {
+        if (index > array.length - 1 || index < 0) {
             throw new RuntimeException("ArrayIndexOutOfBoundsException");
         }
-        int[] temp = new int[arr.length + 1];
-        System.arraycopy(arr, 0, temp, 0, index);
-        System.arraycopy(arr, index, temp, index + 1, temp.length - index - 1);
-        temp[index] = value;
-        arr = temp;
+        int[] tempArray = new int[array.length + 1];
+        System.arraycopy(array, 0, tempArray, 0, index);
+        System.arraycopy(array, index, tempArray, index + 1, tempArray.length - index - 1);
+        tempArray[index] = value;
+        array = tempArray;
     }
 
     @Override
     public void remove(int index) {
-        if (index > arr.length - 1 || index < 0) {
+        if (index > array.length - 1 || index < 0) {
             throw new RuntimeException("ArrayIndexOutOfBoundsException");
         }
-        int[] temp = new int[arr.length - 1];
-        System.arraycopy(arr, 0, temp, 0, index);
-        System.arraycopy(arr, index + 1, temp, index, temp.length - index);
-        arr = temp;
+        int[] tempArray = new int[array.length - 1];
+        System.arraycopy(array, 0, tempArray, 0, index);
+        System.arraycopy(array, index + 1, tempArray, index, tempArray.length - index);
+        array = tempArray;
     }
 
     @Override
@@ -77,18 +81,18 @@ public class IntArrayList implements IntList {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         IntArrayList that = (IntArrayList) o;
-        return Arrays.equals(arr, that.arr);
+        return Arrays.equals(array, that.array);
     }
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(arr);
+        return Arrays.hashCode(array);
     }
 
     @Override
     public String toString() {
         return "IntArrayList{" +
-                "arr=" + Arrays.toString(arr) +
+                "array=" + Arrays.toString(array) +
                 '}';
     }
 }
